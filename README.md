@@ -1,5 +1,6 @@
 # horovod (with Keras)
-Modified the code from the NVIDA multi-GPU course
+Modified the code from the NVIDA multi-GPU course.
+
 
 ## Install horovod from dockerhub
 I've tried other ways but failed to install horovod properly.
@@ -17,4 +18,6 @@ $ mpirun -np $num_gpus python wideresnet-cifar10.py --epochs 5 --batch-size 512
 ```
 
 e.g. Multi-Node
+```
 $ horovodrun -np 16 -H server1:4,server2:4,server3:4,server4:4 python wideresnet-cifar10.py
+```
